@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "RCTests",
+    "environment": "qa.guru",
+    "comment": "Tests report, @nikov108",
+    "reportLink": "allure",
+    "language": "ru",
+    "allureFolder": "build/reports/allure-report/allureReport",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "6100339296:AAGCXQvL7uYndb8xEBHovb_UEKeFWjpeBR0",
+    "chat": "-1001846233441",
+    "replyTo": ""
+  }
+}
