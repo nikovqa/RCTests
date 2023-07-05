@@ -46,25 +46,6 @@ dependencies {
             "org.slf4j:slf4j-simple:2.0.7")
 }
 
-/*tasks.withType(Test) {
-    useJUnitPlatform()
-    systemProperties(System.getProperties())
-    testLogging {
-        if (System.getProperty("threads") != null) {
-            systemProperties += [
-                    'junit.jupiter.execution.parallel.enabled'                 : true,
-                    'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
-                    'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
-                    'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-                    'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
-            ]
-            lifecycle {
-//                events "started", "skipped", "failed", "standard_error", "standard_out"
-                exceptionFormat "short"
-            }
-        }
-    }
-}*/
 
 tasks.withType(Test) {
     useJUnitPlatform()
