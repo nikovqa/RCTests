@@ -1,48 +1,20 @@
-package ru.redcollar.tests;
+package ru.nikov.tests;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.*;
-import io.qameta.allure.selenide.LogType;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
-
-import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
-import static org.assertj.core.api.Assertions.assertThat;
-
-
 
 
 @Owner( "Nikolay Ovchinnikov" )
-@Link(value = "repository", url = "https://github.com/nikovqa/RedCollarTestProject")
+@Link(value = "repository", url = "https://github.com/nikovqa/")
 
 public class RedCollarTests extends TestBase {
-@Disabled
-    @Test
-    @Tag( "critical" )
-    @Severity( SeverityLevel.CRITICAL )
-    @Feature("Сайт Red Collar")
-    @Story( "В консоле страницы нет ошибок" )
-    @DisplayName( "Ошибки в консоли сайта" )
-    void consoleShouldNotHaveErrorsTest() {
-
-        step("Открываем сайт " + baseUrl, () -> {
-            open(baseUrl);
-        });
-        step("Журнал консоли не должен содержать текст 'SEVERE'", () -> {
-            String consoleLogs = String.join("\n", Selenide.getWebDriverLogs( String.valueOf( LogType.BROWSER ) )),
-                    errorText = "SEVERE";
-
-            assertThat(consoleLogs).doesNotContain(errorText);
-        });
-    }
 
     @Test
     @Tag( "normal" )

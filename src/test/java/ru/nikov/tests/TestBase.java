@@ -1,24 +1,17 @@
-package ru.redcollar.tests;
+package ru.nikov.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import helpers.AllureAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RedCollarVacancyForm;
-import helpers.AllureAttachments;
 
 import java.util.Map;
-
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selenide.open;
-import static io.qameta.allure.Allure.step;
 
 
 public class TestBase {
@@ -33,7 +26,7 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty( "browserVersion","100.0" );
         Configuration.browserSize = System.getProperty( "browserSize", "1920x1080" );
         Configuration.baseUrl = System.getProperty( "baseUrl", "https://redcollar.ru/" );
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

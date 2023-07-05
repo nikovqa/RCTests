@@ -1,5 +1,7 @@
-package ru.nikov;public class Main {
+package ru.nikov;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println( "Hello world!" );
     }
 }

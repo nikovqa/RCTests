@@ -1,4 +1,4 @@
-package ru.redcollar.tests;
+package ru.nikov.tests;
 
 import com.github.javafaker.Faker;
 
