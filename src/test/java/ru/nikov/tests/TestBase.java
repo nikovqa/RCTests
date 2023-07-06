@@ -5,9 +5,13 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.AllureAttachments;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.RedCollarVacancyForm;
 
@@ -36,12 +40,14 @@ public class TestBase {
         ) );
         Configuration.browserCapabilities = capabilities;
 
-/*        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments( "--remote-allow-origins=*" );
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
-        WebDriver driver = new ChromeDriver(options);*/
+        WebDriver driver = new ChromeDriver(options);
     }
+
+
 
     @BeforeEach
     public void addListener() {
@@ -55,6 +61,10 @@ public class TestBase {
         AllureAttachments.pageSource();
         AllureAttachments.browserConsoleLogs();
         AllureAttachments.addVideo();
-//        Selenide.closeWebDriver();
     }
+
+/*    @AfterAll
+    static void closeDriver() {
+        Selenide.closeWebDriver();
+    }*/
 }
