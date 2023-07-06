@@ -6,7 +6,7 @@
     "comment": "Tests report, @nikov108",
     "reportLink": "allure",
     "language": "ru",
-    "allureFolder": "build/reports/allure-report/allureReport",
+    "allureFolder": "build/allure-report/",
     "enableChart": true
   },
   "telegram": {
