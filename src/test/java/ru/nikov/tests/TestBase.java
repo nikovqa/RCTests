@@ -39,12 +39,6 @@ public class TestBase {
                 "enableVideo", true
         ) );
         Configuration.browserCapabilities = capabilities;
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments( "--remote-allow-origins=*" );
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        WebDriver driver = new ChromeDriver(options);
     }
 
 
@@ -62,9 +56,4 @@ public class TestBase {
         AllureAttachments.browserConsoleLogs();
         AllureAttachments.addVideo();
     }
-
-/*    @AfterAll
-    static void closeDriver() {
-        Selenide.closeWebDriver();
-    }*/
 }
