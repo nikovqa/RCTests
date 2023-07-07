@@ -2,6 +2,7 @@ package config;
 
 
 import com.codeborne.selenide.Configuration;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.RestAssured;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,6 +27,7 @@ public class ProjectConfiguration {
         if (webConfig.isRemote()) {
 
             Configuration.remote = webConfig.remoteUrl();
+            WebDriverManager.chromedriver().setup();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
@@ -43,6 +45,7 @@ public class ProjectConfiguration {
                 .addArguments("--lang=en-US")
                 .setExperimentalOption("excludeSwitches", new String[]{"enable-automation"})
                 .merge(capabilities);
+
     }
 
     public String getVideoStorageUrl() {
