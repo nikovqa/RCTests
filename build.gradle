@@ -76,22 +76,9 @@ task normal(type: Test) {
 
 task critical(type: Test) {
     useJUnitPlatform {
-        includeTags("normal")
+        includeTags("critical")
     }
 }
-
-task local(type: Test) {
-    useJUnitPlatform {
-        includeTags("local")
-    }
-}
-
-task remote(type: Test) {
-    useJUnitPlatform {
-        includeTags("remote")
-    }
-}
-
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
