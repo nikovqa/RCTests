@@ -7,11 +7,6 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.asynchttpclient.util.HttpConstants.Methods.OPTIONS;
-
 public class ProjectConfiguration {
     private final WebConfig webConfig;
 
