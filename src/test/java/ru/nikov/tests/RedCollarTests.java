@@ -1,10 +1,12 @@
 package ru.nikov.tests;
 
+
 import io.qameta.allure.*;
-import org.intellij.lang.annotations.JdkConstants;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
@@ -14,6 +16,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner( "Nikolay Ovchinnikov" )
 @Link(value = "repository", url = "https://github.com/nikovqa/")
+@Tag ("any")
 
 public class RedCollarTests extends TestBase {
 
@@ -45,7 +48,7 @@ public class RedCollarTests extends TestBase {
     @Feature("Сайт Red Collar")
     @Story( "В футере висит актуальная контактная информация" )
     @DisplayName( "Контактная информация в футере" )
-    void footerRelevantContactTest() {
+    void footerHasRelevantContactTest() {
 
         step( "Открываем сайт " + baseUrl, ()-> {
             open(baseUrl);

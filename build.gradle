@@ -9,7 +9,14 @@ repositories {
 
 def allureVersion = "2.19.0",
     selenideVersion = "6.12.3",
-    junitVersion = "5.9.0"
+    junitVersion = "5.9.0",
+    slf4jVersion = '2.0.3',
+    aspectjVersion = "1.9.19",
+    ownerVersion = "1.0.12",
+    assertjVersion = "3.23.1",
+    restAssuredVersion = "5.2.0"
+
+
 
 
 allure {
@@ -31,19 +38,16 @@ allure {
 dependencies {
     implementation 'org.jetbrains:annotations:20.1.0'
     testImplementation(
+            "org.aspectj:aspectjweaver:$aspectjVersion",
             "com.codeborne:selenide:$selenideVersion",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-//            "io.rest-assured:rest-assured:4.3.1",
-//            "io.qameta.allure:allure-rest-assured:$allureVersion",
-            "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion",
-            "org.assertj:assertj-core:3.19.0",
-            "org.aspectj:aspectjweaver:1.9.19",
-            "org.aeonbits.owner:owner:1.0.12")
-    testRuntimeOnly(
-            "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
-            "org.slf4j:slf4j-simple:2.0.7")
+            "org.slf4j:slf4j-simple:$slf4jVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.aeonbits.owner:owner:$ownerVersion",
+            "org.assertj:assertj-core:$assertjVersion",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            'com.github.javafaker:javafaker:1.0.2'
+    )
 }
 
 
@@ -58,7 +62,11 @@ tasks.withType(Test) {
     }
 }
 
-task normal(type: Test) {
+task any(type: Test) {
+    useJUnitPlatform {
+        includeTags("any")
+    }
+}task normal(type: Test) {
     useJUnitPlatform {
         includeTags("normal")
     }
@@ -66,8 +74,27 @@ task normal(type: Test) {
 
 task critical(type: Test) {
     useJUnitPlatform {
-        includeTags("critical")
+        includeTags("normal")
     }
+}
+
+task local(type: Test) {
+    useJUnitPlatform {
+        includeTags("local")
+    }
+}
+
+task remote(type: Test) {
+    useJUnitPlatform {
+        includeTags("remote")
+    }
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 

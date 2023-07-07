@@ -17,6 +17,9 @@ out/
 !**/src/test/**/out/
 allure-notifications-4.2.1.jar
 
+# Properties files
+*.properties
+
 ### VS Code ###
 .vscode/
 
