@@ -35,12 +35,12 @@ public class TestBase {
         Configuration.browserSize = System.getProperty( "browserSize", "1920x1080" );
         Configuration.baseUrl = System.getProperty( "baseUrl", "https://redcollar.ru/" );*/
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+/*        DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability( "selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ) );
-        Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities = capabilities;*/
     }
     @AfterEach
     void addAttachments() {

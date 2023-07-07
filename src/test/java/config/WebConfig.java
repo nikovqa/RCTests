@@ -5,8 +5,8 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:local.properties",
-        "classpath:remote.properties",
+//        "system:properties",
+        "classpath:config/${env}.properties",
 //        "file:~/${env}.properties",
 //        "file:./${env}.properties"
 })
@@ -28,11 +28,11 @@ public interface WebConfig extends Config {
     String baseUrl();
 
     @Key("isRemote")
-    @DefaultValue("true")
+    @DefaultValue("false")
     boolean isRemote();
 
     @Key("remoteUrl")
-    @DefaultValue("http://localhost:4444")
+    @DefaultValue("https:localhost:4444")
     String remoteUrl();
 
     @Key("videoStorageUrl")

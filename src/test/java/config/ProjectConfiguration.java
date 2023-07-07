@@ -3,7 +3,14 @@ package config;
 
 import com.codeborne.selenide.Configuration;
 import io.restassured.RestAssured;
+import org.openqa.selenium.MutableCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.asynchttpclient.util.HttpConstants.Methods.OPTIONS;
 
 public class ProjectConfiguration {
     private final WebConfig webConfig;
@@ -22,12 +29,25 @@ public class ProjectConfiguration {
         Configuration.browserVersion = webConfig.browserVersion();
         Configuration.browserSize = webConfig.browserSize();
         if (webConfig.isRemote()) {
+
             Configuration.remote = webConfig.remoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.browserCapabilities = capabilities;
+            setChromeOptions(capabilities);
+
         }
+    }
+
+    public static void setChromeOptions(MutableCapabilities capabilities) {
+        Configuration.browserCapabilities = new ChromeOptions()
+                .addArguments("--no-sandbox")
+                .addArguments("--disable-infobars")
+                .addArguments("--disable-popup-blocking")
+                .addArguments("--disable-notifications")
+                .addArguments("--lang=en-US")
+                .setExperimentalOption("excludeSwitches", new String[]{"enable-automation"})
+                .merge(capabilities);
     }
 
     public String getVideoStorageUrl() {
