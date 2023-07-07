@@ -24,9 +24,8 @@ public class ProjectConfiguration {
         Configuration.browser = webConfig.browser().toString();
         Configuration.browserVersion = webConfig.browserVersion();
         Configuration.browserSize = webConfig.browserSize();
-        Configuration.remote = webConfig.remoteUrl();
-        if (webConfig.isRemote()) {
 
+        if (webConfig.isRemote()) {
             Configuration.remote = webConfig.remoteUrl();
             WebDriverManager.chromedriver().setup();
             DesiredCapabilities capabilities = new DesiredCapabilities();

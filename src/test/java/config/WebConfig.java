@@ -6,9 +6,13 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
 
-        "classpath:config/${env}.properties",
+        "classpath:config/remote.properties",
 })
 public interface WebConfig extends Config {
+
+    @Key("isRemote")
+    @DefaultValue("false")
+    boolean isRemote();
     @Key("browser")
     @DefaultValue("CHROME")
     Browser browser();
@@ -24,10 +28,6 @@ public interface WebConfig extends Config {
     @Key("baseUrl")
     @DefaultValue("https://www.redcollar.ru")
     String baseUrl();
-
-    @Key("isRemote")
-    @DefaultValue("false")
-    boolean isRemote();
 
     @Key("remoteUrl")
     @DefaultValue("")
