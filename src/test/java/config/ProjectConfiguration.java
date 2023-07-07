@@ -27,7 +27,7 @@ public class ProjectConfiguration {
         if (webConfig.isRemote()) {
 
             Configuration.remote = webConfig.remoteUrl();
-//            WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver().setup();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
