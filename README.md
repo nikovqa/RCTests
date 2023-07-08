@@ -82,7 +82,7 @@ gradle clean test -Denv=local
 ### Удаленный запуск тестов
 
 ```
-gradle clean test -Denv=local
+gradle clean test -Denv=remote
 ```
 
 ### Параметры сборки
@@ -90,8 +90,10 @@ gradle clean test -Denv=local
 > <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
 >
 > <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
+> 
+>  <code>BROWSER_REMOTE_URL</code> – ссылка удалленного сервера с selinoid.
 >
-> <code>SEVERITY</code> – приоретет запуска тестов (NORMAL, CRITICAL, ALL) (_по умолчанию - <code>CRITICAL</code>_). 
+> <code>TASK</code> – приоретет запуска по SIVERITY (NORMAL, CRITICAL, ALL). 
 >
 
 
@@ -106,26 +108,26 @@ gradle clean test -Denv=local
 ### :pushpin: Главная страница Allure-отчета
 
 <p align="center">
-<img title="Allure Overview" src="images/screenshots/allure_overview.PNG">
+<img title="Allure Overview" src="images/screenshots/allure_overview.png">
 </p>
 
 ### :pushpin: Страница с тестами
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screenshots/allure_behaviors.PNG">
+<img title="Allure Behaviors" src="images/screenshots/allure_behaviors.png">
 </p>
 
 ### :pushpin: Основной дашборд
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screenshots/allure_overview_dashboard.PNG">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure_overview_dashboard.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 
 > После завершения сборки бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом.
 <p align="center">
-<img title="Telegram Notifications" src="images/screenshots/telegram_notifications.PNG">
+<img title="Telegram Notifications" src="images/screenshots/telegram_notifications.png">
 </p>
 
 ## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
@@ -136,4 +138,4 @@ gradle clean test -Denv=local
 </p>
 
 :heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>
+
