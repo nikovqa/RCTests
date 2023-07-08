@@ -116,7 +116,7 @@ gradle clean test -Denv=remote
 > 
 > <code>BROWSER_REMOTE_URL</code> –  адрес удаленного сервера, на котором будут запускаться тесты.
 >
-> <code>TASK</code> – приоретет запуска по _siverity_ (_<code>critical, normal, any</code>_). 
+> <code>TASK</code> – приоретет запуска по _siverity_ (_<code>critical, normal</code>_). 
 >
 
 
