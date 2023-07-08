@@ -71,7 +71,7 @@
         note right of State8 : Отчётность
         note left of State9 : Уведомления
 ```
-## :technologist: Запуск тестов из терминала
+## :man_technologist: Запуск тестов из терминала
 
 ### Локальный запуск тестов
 
