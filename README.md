@@ -123,45 +123,54 @@ gradle clean test -Denv=remote
 >
 
 
-## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Главная страница сборки [Jenkins](https://jenkins.autotests.cloud/job/012-SergeevSS90-unit13-Wildberries_tests/)
-
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg"> Сборка в Jenkins
 <p align="center">
-  <img src="images/screenshots/Jenkins.png">
+<img title="Jenkins Build" src="images/screenshots/Jenkins.png">
 </p>
 
-## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/012-SergeevSS90-unit13-Wildberries_tests/24/allure/)
-
-### :pushpin: Главная страница Allure-отчета
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="images/logo/AllureReport.svg"> Пример Allure-отчета
+### Overview
 
 <p align="center">
 <img title="Allure Overview" src="images/screenshots/allure_overview.png">
 </p>
 
-### :pushpin: Страница с тестами
+### Результат выполнения теста
 
 <p align="center">
-<img title="Allure Behaviors" src="images/screenshots/allure_behaviors.png">
+<img title="Test Results in Alure" src="images/screenshots/allure_behaviors.png">
 </p>
 
-### :pushpin: Основной дашборд
+### Основной дашборд
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_overview_dashboard.png">
 </p>
 
-## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
-
-> После завершения сборки бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом.
+### <img width="4%" style="vertical-align:middle" title="AllureTO" src="images/logo/AllureTO.svg"> Интеграция с Allure TestOps
+Тестовая сборка в Jenkins интегрирована с Allure TestOps. В Allure TestOps автоматически обновляется список тест-кейсов и результаты выполнения тестов.
 <p align="center">
-<img title="Telegram Notifications" src="images/screenshots/telegram_notifications.png">
+<img width="100%" title="Allure TestOps Cases - Feature view" src="images/screenshots/allure_testops.png">
 </p>
 
-## <img width="4%" title="Selenoid" src="images/logo/Selenoid.svg"> Пример запуска теста в Selenoid
+### Интеграция с Jira
+Также полученные из автотестов тест-кейсы прикреплены к задаче в Jira.
+<p align="center">
+<img width="100%" title="Allure TestOps Cases - Feature view" src="images/screenshots/jira.png">
+</p>
 
-> К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+### <img width="4%" style="vertical-align:middle" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
+
+После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне.
+
+<p align="center">
+<img width="70%" title="Telegram Notifications" src="images/screenshots/telegram_notifications.png">
+</p>
+
+### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"><img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Browserstack.svg"> Примеры видео запуска тестов в Selenoid и Browserstack
+
+При запуске тестов в remote-окружении к каждому тесту в отчете прилагается видео.
+<p>Пример видео из Selenoid</p>
 <p align="center">
   <img title="Selenoid Video" src="images/gif/selenoid_video.gif">
 </p>
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-
