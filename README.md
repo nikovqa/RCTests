@@ -38,6 +38,7 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Selenoid" src="images/logo/Selenoid.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
+<img width="6%" title="Allure TestOps" src="images/logo/AllureTO.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
