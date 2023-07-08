@@ -93,7 +93,7 @@ gradle clean test -Denv=remote
 > 
 >  <code>BROWSER_REMOTE_URL</code> – ссылка удалленного сервера с selinoid.
 >
-> <code>TASK</code> – приоретет запуска по _siverity_ (<code>critical, normal, all</code>). 
+> <code>TASK</code> – приоретет запуска по _siverity_ (_<code>critical, normal, any</code>_). 
 >
 
 
