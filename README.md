@@ -100,7 +100,7 @@ gradle clean test -Denv=remote
 ## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Главная страница сборки [Jenkins](https://jenkins.autotests.cloud/job/012-SergeevSS90-unit13-Wildberries_tests/)
 
 <p align="center">
-  <img src="images/screenshots/Jenkins.PNG">
+  <img src="images/screenshots/Jenkins.png">
 </p>
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Отчет о результатах тестирования в [Allure Report](https://jenkins.autotests.cloud/job/012-SergeevSS90-unit13-Wildberries_tests/24/allure/)
