@@ -5,7 +5,7 @@
 - [Описание](#open_book-описание)
 - [Покрытый функционал](#globe_with_meridians-покрытый-функционал)
 - [Использованный стек технологий](#computer-использованный-стек-технологий)
-- [Запуск тестов](#man_technologist-Запуск тестов)
+- [Запуск тестов](#man_technologist-Запуск-тестов)
 - [Сборка в Jenkins](#-сборка-в-jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testops)
@@ -14,11 +14,14 @@
 - [Примеры видео запуска тестов в Selenoid и Browserstack](#-примеры-видео-запуска-тестов-в-selenoid)
 
 ## :open_book: Описание
-В проекте реализованы UI тесты для сайта _wwww.redcollar.ru_
+В проекте реализованы UI тесты для сайта [_wwww.redcollar.ru_](https://www.redcollar.ru/)
+Автотесты написаны на <code>Java</code> с использованием <code>JUnit 5</code> и <code>Gradle</code>.
+Для UI-тестов использован фреймворк [Selenide](https://selenide.org/).
+Запуск тестов можно осуществлять локально или в [Selenoid](https://aerokube.com/selenoid/).
+Также реализована сборка в <code>Jenkins</code> с формированием Allure-отчета и отправкой уведомления с результатами в <code>Telegram</code> после завершения прогона.
+
 
 ## <a name="globe_with_meridians-покрытый-функционал"></a>:globe_with_meridians: Покрытый функционал
-
-### UI
 
 - [x] Проверка актуальной контактной информации на сайте
 - [x] Проверка перехода на страницу проектов из меню сайта
@@ -94,9 +97,7 @@ gradle clean test
 ```
 gradle clean test -Denv=remote
 ```
-```
 При необходимости также можно переопределить параметры запуска
-
 ```
 gradle clean test -Denv=remote
 -Dbrowser=${BROWSER_NAME}
@@ -105,7 +106,6 @@ gradle clean test -Denv=remote
 -DbaseUrl=${BASE_URL}
 -DremoteUrl=${REMOTE_BROWSER_URL}
 ```
-
 ### Параметры сборки
 
 > <code>BROWSER</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
