@@ -167,7 +167,7 @@ gradle clean test -Denv=remote
 <img width="70%" title="Telegram Notifications" src="images/screenshots/telegram_notifications.png">
 </p>
 
-### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Примеры видео запуска тестов в Selenoid и Browserstack
+### <img width="4%" style="vertical-align:middle" title="Selenoid" src="images/logo/Selenoid.svg"> Примеры видео запуска тестов в Selenoid
 
 При запуске тестов в remote-окружении к каждому тесту в отчете прилагается видео.
 <p>Пример видео из Selenoid</p>
