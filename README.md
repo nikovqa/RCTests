@@ -78,11 +78,35 @@
 ```
 gradle clean test -Denv=local
 ```
+При необходимости можно переопределить параметры запуска
+```
+gradle clean test
+-Denv=local
+-Dbrowser=${BROWSER_NAME}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbaseUrl=${BASE_URL}
+```
 
-### Удаленный запуск тестов
+### Запуск тестов на удаленном браузере
 
 ```
 gradle clean test -Denv=remote
+```
+Для запуска web-тестов в selenoid
+```
+gradle clean webTests -Denv=remoteUrl
+```
+
+При необходимости также можно переопределить параметры запуска
+
+```
+gradle clean test -Denv=remote
+-Dbrowser=${BROWSER_NAME}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbaseUrl=${BASE_URL}
+-DremoteUrl=${REMOTE_BROWSER_URL}
 ```
 
 ### Параметры сборки
@@ -91,7 +115,9 @@ gradle clean test -Denv=remote
 >
 > <code>BROWSER_SIZE</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
 > 
->  <code>BROWSER_REMOTE_URL</code> – ссылка удалленного сервера с selinoid.
+> <code>BASE_URL</code> – Url, по которому будет открываться тестируемое приложение.
+> 
+> <code>BROWSER_REMOTE_URL</code> –  адрес удаленного сервера, на котором будут запускаться тесты.
 >
 > <code>TASK</code> – приоретет запуска по _siverity_ (_<code>critical, normal, any</code>_). 
 >
