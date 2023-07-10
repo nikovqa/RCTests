@@ -16,7 +16,7 @@
 ## :open_book: Описание
 В проекте реализованы UI тесты для сайта [_wwww.redcollar.ru_](https://www.redcollar.ru/)
 Автотесты написаны на <code>Java</code> с использованием <code>JUnit 5</code> и <code>Gradle</code>.
-Для UI-тестов использован фреймворк [_Selenide_](https://selenide.org/).
+Для тестов использован фреймворк [_Selenide_](https://selenide.org/).
 Запуск тестов можно осуществлять локально или в [_Selenoid_](https://aerokube.com/selenoid/).
 Также реализована сборка в <code>Jenkins</code> с формированием Allure-отчета и отправкой уведомления с результатами в <code>Telegram</code> после завершения прогона.
 
